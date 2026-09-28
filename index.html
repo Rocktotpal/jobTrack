@@ -119,6 +119,7 @@
       </nav>
       <main class="hero-container">
         <section class="application-container">
+          <!-- Title part -->
           <header class="application-title">
             <div class="title-description">
               <h1>My Job Application</h1>
@@ -133,6 +134,7 @@
             </button>
           </header>
 
+          <!-- Application Count Cards -->
           <div class="application-cards-container">
             <div class="card card-applied">
               <i class="fa-solid fa-paper-plane"></i>
@@ -154,11 +156,12 @@
 
             <div class="card card-rejected">
               <i class="fa-regular fa-circle-xmark"></i>
-              <p>class="card-text">Rejected</p>
+              <p class="card-text">Rejected</p>
               <p class="count rejected-count">8</p>
             </div>
           </div>
 
+          <!-- Application Filters -->
           <div class="application-filter-container">
             <form class="search">
               <button class="search-icon">
@@ -174,10 +177,62 @@
             <button class="filter filter-applied">Applied</button>
             <button class="filter filter-offer">Offer</button>
             <button class="filter filter-rejected">Rejected</button>
-            <button class="filter filter-rejected">
+            <button class="filter filter-sort">
               Sort by <span class="drop-down"> &#x2304; </span>
             </button>
           </div>
+
+          <!-- Main Application UI -->
+          <article class="application-ui-container">
+            <div class="main-application-card">
+              <div class="logo">
+                <img
+                  src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000"
+                  alt="Google's Logo"
+                />
+              </div>
+
+              <div class="job-details">
+                <h4 class="company-name">Google</h4>
+                <p class="designation">Frontend Developer</p>
+                <div class="location-date-container">
+                  <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="location-type">Remote</p>
+                  </div>
+                  <div class="date-applied">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p class="date">Applied: Sep 28, 2026</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="application-state">
+                <p class="application-state-text">Interview</p>
+              </div>
+
+              <button class="btn-view-details">View Details</button>
+
+              <div class="menu-container">
+                <!-- The Three Dots Button -->
+                <button class="menu-button" onclick="toggleMenu()">
+                  <img
+                    src="https://proicons.com/icon/531162.svg"
+                    alt="Meatballs Menu icon"
+                    width="24"
+                    height="24"
+                  />
+                </button>
+
+                <!-- The Hidden Actions Menu -->
+                <ul id="dropdownMenu" class="dropdown-menu">
+                  <li><a href="#edit">Edit</a></li>
+                  <li><a href="#share">Share</a></li>
+                  <li><a href="#delete" class="delete-action">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
         </section>
         <section class="feature-container"></section>
       </main>
