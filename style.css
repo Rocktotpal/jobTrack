@@ -1,12 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .app-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 80px auto;
 }
 
 .hero-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+
+.app-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.app-title-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-title-cont p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.fa-briefcase {
+  font-size: 2rem;
+}
+
+.fa-circle {
+  font-size: 0.3rem;
 }
 
 /*
