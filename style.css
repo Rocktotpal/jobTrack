@@ -4,6 +4,11 @@
   grid-template-rows: 1fr auto;
 }
 
+.hero-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 /*
 .motivation-card {
   /* Box styling matching the soft blue-gray tinted gradient/background 
