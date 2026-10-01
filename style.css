@@ -4,10 +4,60 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Background colours */
+  --background-main: #fdfefe;
+  --background-light: #f7fafe;
+  --surface: #ffffff;
+
+  /* Sidebar */
+  --sidebar-background: #ecf2fe;
+  --nav-active-background: #e0e9ff;
+  --nav-active-text: #3b60eb;
+
+  /* Input (Search) */
+  --input-background: #f6f8f9;
+  --input-border: #e1e8f3;
+
+  /* Primary brand colours */
+  --primary: #3e64ec;
+  --primary-dark: #2c4fc7;
+
+  /* Typography */
+  --font-primary: #041143;
+  --font-secondary: #182f5c;
+  --font-muted: #697da0;
+  --font-light: #8899b5;
+
+  /* Borders */
+  --border-light: #e1e8f3;
+  --border-medium: #c3cee1;
+
+  /* Application Status */
+  --status-applied: #2c74f4;
+  --status-interview: #ab82f8;
+  --status-offer: #36bd7f;
+  --status-rejected: #fc7b97;
+
+  /* Status Card Background */
+  --card-applied: #e8f2fd;
+  --card-interview: #f2eefd;
+  --card-offer: #e3f7ee;
+  --card-rejected: #fdedf1;
+
+  /* Form Filters */
+  --filter-background: #ffffff;
+  --filter-border: #e1e8f3;
+  --filter-text: #182f5c;
+  --filter-active-background: #3b60eb;
+  --filter-active-text: #ffffff;
+}
+
 .app-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 80px auto;
+  background: var(--background-main);
 }
 
 .hero-container {
@@ -20,6 +70,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  background: var(--sidebar-background);
 }
 
 .app-title-cont {
@@ -43,6 +94,14 @@
   font-size: 0.3rem;
 }
 
+.profile-container,
+.search-field,
+.search-btn,
+.notification-btn {
+  height: 2rem;
+  border-radius: 5px;
+}
+
 .search-n-profile {
   display: flex;
   justify-content: space-between;
@@ -50,22 +109,31 @@
   padding: 0 1.6rem;
 }
 
+.search-input {
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
+}
 .search-field {
-  height: 2rem;
   width: 20rem;
   overflow-x: auto;
   padding: 2px 5px;
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
   /* border: none; */
-  border-radius: 5px;
 }
 
 .search-btn {
-  height: 2rem;
   width: 6rem;
-  border-radius: 5px;
   font-size: 0.9rem;
 }
 
+.notification-btn {
+  padding: 2px 3px;
+}
+
+.nav-container {
+  background-color: var(--sidebar-background);
+}
 /*
 .motivation-card {
   /* Box styling matching the soft blue-gray tinted gradient/background 
