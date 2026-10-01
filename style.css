@@ -5,6 +5,8 @@
 }
 
 :root {
+  --font-main: "Inter", sans-serif;
+
   /* Background colours */
   --background-main: #fdfefe;
   --background-light: #f7fafe;
@@ -53,6 +55,9 @@
   --filter-active-text: #ffffff;
 }
 
+body {
+  font-family: var(--font-main);
+}
 .app-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -77,6 +82,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 1rem;
+  color: var(--font-primary);
 }
 
 .app-title-cont p {
@@ -84,10 +91,13 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
+  font-size: 0.8rem;
+  color: var(--font-secondary);
 }
 
 .fa-briefcase {
   font-size: 2rem;
+  color: var(--primary);
 }
 
 .fa-circle {
