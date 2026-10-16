@@ -20,26 +20,35 @@
   </head>
   <body>
     <div class="app-container">
+      <!-- Application Header -->
       <header class="app-name-container">
-        <i class="fa-solid fa-briefcase"></i>
+        <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+
         <div class="app-title-cont">
           <h2>JobTrack</h2>
           <p>
-            <span>Track</span> <i class="fa-solid fa-circle"></i>
-            <span>Organize</span> <i class="fa-solid fa-circle"></i>
+            <span>Track</span> <i class="fa-solid fa-circle aria-hidden="true""></i>
+            <span>Organize</span> <i class="fa-solid fa-circle aria-hidden="true""></i>
             <span>Get Hired</span>
           </p>
         </div>
       </header>
-      <section class="search-n-profile">
-        <form class="search">
+
+      <!-- Search and Profile -->
+      <section class="search-n-profile" aria-label="Search and profile">
+        <form class="search" role="search">
+          <label class="sr-only" for="global-search">
+            Search companies, job titles, or keywords
+          </label>
+          
           <input
             type="text"
+            id="global-search"
             class="search-field"
             placeholder="Search companies, job titles, or keywords..."
           />
-          <button class="btn search-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <button type="submit" class="btn search-btn">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             <span>Search</span>
           </button>
         </form>
