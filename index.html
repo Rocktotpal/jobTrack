@@ -27,8 +27,10 @@
         <div class="app-title-cont">
           <h2>JobTrack</h2>
           <p>
-            <span>Track</span> <i class="fa-solid fa-circle aria-hidden="true""></i>
-            <span>Organize</span> <i class="fa-solid fa-circle aria-hidden="true""></i>
+            <span>Track</span>
+            <i class="fa-solid fa-circle" aria-hidden="true"></i>
+            <span>Organize</span>
+            <i class="fa-solid fa-circle" aria-hidden="true"></i>
             <span>Get Hired</span>
           </p>
         </div>
@@ -40,7 +42,7 @@
           <label class="sr-only" for="global-search">
             Search companies, job titles, or keywords
           </label>
-          
+
           <input
             type="text"
             id="global-search"
@@ -52,49 +54,74 @@
             <span>Search</span>
           </button>
         </form>
+
         <div class="profile-container">
-          <button class="notification-btn">
+          <button
+            type="button"
+            class="notification-btn"
+            aria-label="Notifications"
+          >
             <!-- <i class="fa-regular fa-bell"></i> -->
-            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-bell" aria-hidden="true"></i>
             <span class="badge">3</span>
           </button>
-          <button class="profile-container">
-            <i class="fa-solid fa-user"></i>
+          <button class="profile-container" aria-label="Open profile menu">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
             <span class="profile-name">Rocktotpal</span>
-            <span class="drop-down"> &#x2304; </span>
+            <span class="drop-down" aria-hidden="true"> &#x2304; </span>
           </button>
         </div>
       </section>
-      <nav class="nav-container">
+
+      <!-- Sidebar Navigation -->
+      <nav class="nav-container" aria-label="Main navigation">
         <ul class="nav-items">
           <li class="nav-item">
-            <i class="nav-icon fa-solid fa-house"></i>
-            <p class="nav-text">Dashboard</p>
+            <a href="#dashboard" aria-current="page">
+              <i class="nav-icon fa-solid fa-house" aria-hidden="true"></i>
+              <span class="nav-text">Dashboard</span>
+            </a>
           </li>
 
           <li class="nav-item">
-            <i class="nav-icon fa-regular fa-file-lines"></i>
-            <p class="nav-text">Applications</p>
+            <a href="#applications">
+              <i
+                class="nav-icon fa-regular fa-file-lines"
+                aria-hidden="true"
+              ></i>
+              <span class="nav-text">Applications</span>
+            </a>
           </li>
 
           <li class="nav-item">
-            <i class="nav-icon fa-regular fa-bookmark"></i>
-            <p class="nav-text">Saved Jobs</p>
+            <a href="#saved-jobs">
+              <i class="nav-icon fa-regular fa-bookmark" aria-hidden="true"></i>
+              <span class="nav-text">Saved Jobs</span>
+            </a>
           </li>
 
           <li class="nav-item">
-            <i class="nav-icon fa-solid fa-building"></i>
-            <p class="nav-text">Companies</p>
+            <a href="#companies">
+              <i class="nav-icon fa-solid fa-building" aria-hidden="true"></i>
+              <span class="nav-text">Companies</span>
+            </a>
           </li>
 
           <li class="nav-item">
-            <i class="nav-icon fa-regular fa-calendar-days"></i>
-            <p class="nav-text">Calender</p>
+            <a href="#calendar">
+              <i
+                class="nav-icon fa-regular fa-calendar-days"
+                aria-hidden="true"
+              ></i>
+              <span class="nav-text">Calendar</span>
+            </a>
           </li>
 
           <li class="nav-item">
-            <i class="nav-icon fa-solid fa-gear"></i>
-            <p class="nav-text">Settings</p>
+            <a href="#settings">
+              <i class="nav-icon fa-solid fa-gear" aria-hidden="true"></i>
+              <span class="nav-text">Settings</span>
+            </a>
           </li>
         </ul>
 
