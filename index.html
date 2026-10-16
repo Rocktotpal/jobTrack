@@ -221,13 +221,19 @@
               <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </button>
 
-            <button type="button" class="filter filter-all" aria-pressed="true">
+            <button
+              type="button"
+              class="filter filter-all"
+              data-filter="all"
+              aria-pressed="true"
+            >
               All
             </button>
 
             <button
               type="button"
               class="filter filter-applied"
+              data-filter="applied"
               aria-pressed="false"
             >
               Applied
@@ -236,6 +242,7 @@
             <button
               type="button"
               class="filter filter-interview"
+              data-filter="interview"
               aria-pressed="false"
             >
               Interview
@@ -244,6 +251,7 @@
             <button
               type="button"
               class="filter filter-offer"
+              data-filter="offer"
               aria-pressed="false"
             >
               Offer
@@ -252,6 +260,7 @@
             <button
               type="button"
               class="filter filter-rejected"
+              data-filter="rejected"
               aria-pressed="false"
             >
               Rejected
