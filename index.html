@@ -125,27 +125,17 @@
           </li>
         </ul>
 
+        <!-- Motivational Card -->
         <div class="motivation-card">
           <div class="card-icon">
-            <!-- <svg
-              xmlns="http://w3.org"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
-              <path
-                fill="#0066cc"
-                d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"
-              />
-            </svg> -->
-            <i class="fa-solid fa-seedling"></i>
+            <i class="fa-solid fa-seedling" aria-hidden="true"></i>
           </div>
 
           <p class="card-text">
             Small steps <br />every day lead to <br />big results
           </p>
 
-          <div class="card-decoration">
+          <div class="card-decoration" aria-hidden="true">
             <svg viewBox="0 0 100 20" width="80" height="20">
               <path
                 d="M5,15 Q30,5 50,15 T95,10"
@@ -157,70 +147,125 @@
           </div>
         </div>
       </nav>
-      <main class="hero-container">
+
+      <!-- Main Dashboard -->
+
+      <main class="hero-container" id="dashboard">
+        <!-- Applications Column -->
+
         <section class="application-container">
           <!-- Title part -->
           <header class="application-title">
             <div class="title-description">
-              <h1>My Job Application</h1>
+              <h1 id="applications-heading">My Job Application</h1>
               <p>
                 Keep track of your applications, interviews and offers all in
                 one place
               </p>
             </div>
-            <button class="add-application">
-              <i class="fa-solid fa-plus"></i>
+
+            <button type="button" class="add-application">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
               <span class="add-text">Add Application</span>
             </button>
           </header>
 
-          <!-- Application Count Cards -->
-          <div class="application-cards-container">
+          <!-- Application Summary Cards -->
+          <section
+            class="application-cards-container"
+            aria-label="Application status summary"
+          >
             <div class="card card-applied">
-              <i class="fa-solid fa-paper-plane"></i>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
               <p class="card-text">Applied</p>
               <p class="count applied-count">12</p>
             </div>
 
             <div class="card card-interview">
-              <i class="fa-solid fa-user-group"></i>
+              <i class="fa-solid fa-user-group" aria-hidden="true"></i>
               <p class="card-text">Interview</p>
               <p class="count interview-count">4</p>
             </div>
 
             <div class="card card-offer">
-              <i class="fa-solid fa-envelope-open"></i>
+              <i class="fa-solid fa-envelope-open" aria-hidden="true"></i>
               <p class="card-text">Offer</p>
               <p class="count offer-count">1</p>
             </div>
 
             <div class="card card-rejected">
-              <i class="fa-regular fa-circle-xmark"></i>
+              <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
               <p class="card-text">Rejected</p>
               <p class="count rejected-count">8</p>
             </div>
-          </div>
+          </section>
 
-          <!-- Application Filters -->
-          <div class="application-filter-container">
-            <form class="search">
-              <button class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-              <input
-                type="text"
-                class="search-application"
-                placeholder="Search applications..."
-              />
-            </form>
-            <button class="filter filter-all">All</button>
-            <button class="filter filter-applied">Applied</button>
-            <button class="filter filter-offer">Offer</button>
-            <button class="filter filter-rejected">Rejected</button>
-            <button class="filter filter-sort">
-              Sort by <span class="drop-down"> &#x2304; </span>
+          <!-- Application Search, Filters and Sorting  -->
+          <form class="application-filter-container" role="search">
+            <label class="sr-only" for="application-search">
+              Search applications
+            </label>
+
+            <input
+              type="search"
+              id="application-search"
+              class="search-application"
+              placeholder="Search applications..."
+            />
+
+            <button
+              type="submit"
+              class="search-icon"
+              aria-label="Search applications"
+            >
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </button>
-          </div>
+
+            <button type="button" class="filter filter-all" aria-pressed="true">
+              All
+            </button>
+
+            <button
+              type="button"
+              class="filter filter-applied"
+              aria-pressed="false"
+            >
+              Applied
+            </button>
+
+            <button
+              type="button"
+              class="filter filter-interview"
+              aria-pressed="false"
+            >
+              Interview
+            </button>
+
+            <button
+              type="button"
+              class="filter filter-offer"
+              aria-pressed="false"
+            >
+              Offer
+            </button>
+
+            <button
+              type="button"
+              class="filter filter-rejected"
+              aria-pressed="false"
+            >
+              Rejected
+            </button>
+
+            <label for="sort-applications">Sort by:</label>
+
+            <select id="sort-applications" class="filter-sort">
+              <option value="date-desc">Newest first</option>
+              <option value="date-asc">Oldest first</option>
+              <option value="company-asc">Company A–Z</option>
+              <option value="company-desc">Company Z–A</option>
+            </select>
+          </form>
 
           <!-- Main Application UI -->
           <article class="application-ui-container">
