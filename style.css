@@ -61,6 +61,7 @@
 
 body {
   font-family: var(--font-main);
+  color: var(--font-primary);
 }
 
 .app-container {
@@ -192,6 +193,51 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.application-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.6rem;
+  gap: 1.6rem;
+}
+
+.title-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.application-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+#applications-heading {
+  color: var(--font-primary);
+  font-size: 1.7rem;
+}
+
+.title-description p {
+  color: var(--font-muted);
+  font-size: 0.8rem;
+}
+
+.add-application {
+  padding: 0.3rem 0.5rem;
+  height: 2.2rem;
+  width: 9rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+  background-color: var(--primary);
+  color: var(--filter-active-text);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.add-application:hover {
+  cursor: pointer;
 }
 
 /*
