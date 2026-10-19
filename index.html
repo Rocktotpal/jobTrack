@@ -206,24 +206,26 @@
               Search applications
             </label>
 
-            <input
-              type="search"
-              id="application-search"
-              class="search-application"
-              placeholder="Search applications..."
-            />
+            <div class="application-search-container">
+              <input
+                type="search"
+                id="application-search"
+                class="search-application"
+                placeholder="Search applications..."
+              />
 
-            <button
-              type="submit"
-              class="search-icon"
-              aria-label="Search applications"
-            >
-              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            </button>
+              <button
+                type="submit"
+                class="search-icon"
+                aria-label="Search applications"
+              >
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              </button>
+            </div>
 
             <button
               type="button"
-              class="filter filter-all"
+              class="filter filter-all filter-active"
               data-filter="all"
               aria-pressed="true"
             >
@@ -266,14 +268,16 @@
               Rejected
             </button>
 
-            <label for="sort-applications">Sort by:</label>
+            <div class="sort-control">
+              <label for="sort-applications">Sort by:</label>
 
-            <select id="sort-applications" class="filter-sort">
-              <option value="date-desc">Newest first</option>
-              <option value="date-asc">Oldest first</option>
-              <option value="company-asc">Company A–Z</option>
-              <option value="company-desc">Company Z–A</option>
-            </select>
+              <select id="sort-applications" class="filter-sort">
+                <option value="date-desc">Newest first</option>
+                <option value="date-asc">Oldest first</option>
+                <option value="company-asc">Company A–Z</option>
+                <option value="company-desc">Company Z–A</option>
+              </select>
+            </div>
           </form>
 
           <!-- Application List -->
