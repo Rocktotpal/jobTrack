@@ -135,16 +135,32 @@ body {
   padding: 2px 5px;
   background-color: var(--input-background);
   border: 1px solid var(--input-border);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   /* border: none; */
 }
 
 .search-btn {
   width: 6rem;
   font-size: 0.9rem;
+  background-color: var(--input-background);
+  color: var(--font-muted);
+  font-size: 0.8rem;
 }
 
 .notification-btn {
   padding: 2px 3px;
+  height: 2.2rem;
+  width: 3.6rem;
+  background-color: var(--background-light);
+  border: none;
+}
+
+.profile-container {
+  padding: 2px 3px;
+  height: 2.2rem;
+  background-color: var(--background-light);
+  border: none;
+  box-shadow: none;
 }
 
 .nav-container {
@@ -224,19 +240,23 @@ body {
 }
 
 .add-application {
-  padding: 0.3rem 0.5rem;
-  height: 2.2rem;
   width: 9rem;
+  height: 2.2rem;
   font-size: 0.9rem;
   overflow: hidden;
   background-color: var(--primary);
   color: var(--filter-active-text);
+}
+
+.btn {
+  padding: 0.3rem 0.5rem;
   border: none;
   border-radius: 6px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .add-application:hover {
+  height: 2.2rem;
   cursor: pointer;
 }
 
