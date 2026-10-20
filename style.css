@@ -452,6 +452,19 @@ a {
   border-radius: 6px;
 }
 
+.logo-container {
+  height: 4.6rem;
+  width: 4.6rem;
+  background-color: var(--input-background);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-light);
+}
+
+.company-logo {
+  height: 100%;
+}
+
 /*
 .motivation-card {
   /* Box styling matching the soft blue-gray tinted gradient/background 
