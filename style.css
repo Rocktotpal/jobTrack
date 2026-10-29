@@ -57,6 +57,13 @@
   --filter-text: #182f5c;
   --filter-active-background: #3b60eb;
   --filter-active-text: #ffffff;
+
+  /* Donut chart */
+  --c-applied: #3b6ff5;
+  --c-interview: #a96cf2;
+  --c-offer: #22c55e;
+  --c-rejected: #f4637d;
+  --c-track: #eef1f8;
 }
 
 body {
@@ -490,6 +497,135 @@ a {
   gap: 0.6rem;
   font-size: 0.9rem;
   color: var(--font-muted);
+}
+
+/* Application Progress */
+
+.progress-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(30, 50, 120, 0.06);
+}
+
+.progress-card__title {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-navy);
+}
+
+.progress-card__body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ---- Donut ---- */
+.donut {
+  position: relative; /* anchor for the centered label */
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.donut__svg {
+  display: block;
+  width: 100%;
+  transform: rotate(
+    -90deg
+  ); /* SVG circles start at 3 o'clock; this moves the start to 12 */
+}
+
+.donut__track,
+.donut__segment {
+  fill: none; /* we draw the outline only, so it becomes a ring */
+  stroke-width: 6; /* ring thickness: bigger = thicker donut */
+}
+
+.donut__track {
+  stroke: var(--c-track);
+}
+
+.donut__segment {
+  transition:
+    stroke-dasharray 0.6s ease,
+    stroke-dashoffset 0.6s ease;
+}
+.donut__segment--applied {
+  stroke: var(--c-applied);
+}
+.donut__segment--interview {
+  stroke: var(--c-interview);
+}
+.donut__segment--offer {
+  stroke: var(--c-offer);
+}
+.donut__segment--rejected {
+  stroke: var(--c-rejected);
+}
+
+.donut__center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.donut__total {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  line-height: 1;
+}
+.donut__label {
+  font-size: 0.75rem;
+  color: var(--font-muted);
+  margin-top: 4px;
+}
+
+/* ---- Legend ---- */
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: grid;
+  gap: 14px;
+}
+
+.legend__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+
+.legend__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.legend__dot--applied {
+  background: var(--c-applied);
+}
+.legend__dot--interview {
+  background: var(--c-interview);
+}
+.legend__dot--offer {
+  background: var(--c-offer);
+}
+.legend__dot--rejected {
+  background: var(--c-rejected);
+}
+
+.legend__count {
+  font-weight: 500;
+}
+.legend__percent {
+  color: var(--font-muted);
+  min-width: 3.2em;
+  text-align: right;
 }
 
 /*

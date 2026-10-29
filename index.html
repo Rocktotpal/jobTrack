@@ -384,9 +384,112 @@
           </section>
         </section>
         <section class="feature-container">
-          <article class="progress-container">
+          <!-- <article class="progress-container">
             <h3 class="features-heading">Application Progress</h3>
-          </article>
+          </article> -->
+          <section
+            class="progress-card"
+            aria-labelledby="progress-title"
+            data-progress-chart
+          >
+            <h2 class="progress-card__title" id="progress-title">
+              Application Progress
+            </h2>
+
+            <div class="progress-card__body">
+              <div class="donut">
+                <svg
+                  class="donut__svg"
+                  viewBox="0 0 40 40"
+                  role="img"
+                  aria-label="Applications by status: 12 applied, 4 interview, 1 offer, 8 rejected"
+                >
+                  <circle class="donut__track" cx="20" cy="20" r="16" />
+
+                  <circle
+                    class="donut__segment donut__segment--applied"
+                    data-status="applied"
+                    cx="20"
+                    cy="20"
+                    r="16"
+                    pathLength="100"
+                    stroke-dasharray="48 52"
+                    stroke-dashoffset="0"
+                  />
+                  <circle
+                    class="donut__segment donut__segment--interview"
+                    data-status="interview"
+                    cx="20"
+                    cy="20"
+                    r="16"
+                    pathLength="100"
+                    stroke-dasharray="16 84"
+                    stroke-dashoffset="-48"
+                  />
+                  <circle
+                    class="donut__segment donut__segment--offer"
+                    data-status="offer"
+                    cx="20"
+                    cy="20"
+                    r="16"
+                    pathLength="100"
+                    stroke-dasharray="4 96"
+                    stroke-dashoffset="-64"
+                  />
+                  <circle
+                    class="donut__segment donut__segment--rejected"
+                    data-status="rejected"
+                    cx="20"
+                    cy="20"
+                    r="16"
+                    pathLength="100"
+                    stroke-dasharray="32 68"
+                    stroke-dashoffset="-68"
+                  />
+                </svg>
+
+                <div class="donut__center">
+                  <span class="donut__total" data-total>25</span>
+                  <span class="donut__label">Total</span>
+                </div>
+              </div>
+
+              <ul class="legend">
+                <li class="legend__item" data-status="applied">
+                  <span class="legend__dot legend__dot--applied"></span>
+                  <span class="legend__name">Applied</span>
+                  <span class="legend__count" data-count>12</span>
+                  <span class="legend__percent"
+                    >(<span data-percent>48</span>%)</span
+                  >
+                </li>
+                <li class="legend__item" data-status="interview">
+                  <span class="legend__dot legend__dot--interview"></span>
+                  <span class="legend__name">Interview</span>
+                  <span class="legend__count" data-count>4</span>
+                  <span class="legend__percent"
+                    >(<span data-percent>16</span>%)</span
+                  >
+                </li>
+                <li class="legend__item" data-status="offer">
+                  <span class="legend__dot legend__dot--offer"></span>
+                  <span class="legend__name">Offer</span>
+                  <span class="legend__count" data-count>1</span>
+                  <span class="legend__percent"
+                    >(<span data-percent>4</span>%)</span
+                  >
+                </li>
+                <li class="legend__item" data-status="rejected">
+                  <span class="legend__dot legend__dot--rejected"></span>
+                  <span class="legend__name">Rejected</span>
+                  <span class="legend__count" data-count>8</span>
+                  <span class="legend__percent"
+                    >(<span data-percent>32</span>%)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
         </section>
       </main>
     </div>
